@@ -25,7 +25,7 @@ st.set_page_config(
 )
 
 # Title & Subtitle
-st.title("🏥 Dashboard Sistem Monitoring Risiko Kesehatan Ibu & Rekomendasi Pelatihan SDM Kesehatan")
+st.title("Dashboard Sistem Monitoring Risiko Kesehatan Ibu & Rekomendasi Pelatihan SDM Kesehatan")
 st.markdown("""
 Aplikasi prototipe ini memanfaatkan **Machine Learning** untuk mengklasifikasikan risiko kesehatan ibu hamil (`Low Risk` vs `High Risk`), 
 menyediakan analisis interaktif **What-If Analysis**, serta merekomendasikan fokus materi pelatihan bagi Tenaga Kesehatan berbasis bobot *Feature Importance*.
@@ -268,7 +268,7 @@ with tab3:
     if 'analyzed' not in st.session_state:
         st.session_state.analyzed = False
 
-    if st.button("🔮 Analisis Prediksi Risiko Pasien", type="primary"):
+    if st.button("Analisis Prediksi Risiko Pasien", type="primary"):
         st.session_state.analyzed = True
 
     # Render Hasil & What-If Analysis hanya jika tombol sudah pernah diklik
@@ -368,7 +368,7 @@ Probabilitas Risiko     : {prob*100:.2f}%
 # TAB 4: SDM TRAINING RECOMMENDATIONS
 # =============================================================================
 with tab4:
-    st.header("🎯 Rekomendasi Prioritas Pelatihan SDM Kesehatan (Bidan/Puskesmas)")
+    st.header("Rekomendasi Prioritas Pelatihan SDM Kesehatan (Bidan/Puskesmas)")
     st.markdown("""
     Pengalokasian kapasitas pelatihan SDM Kesehatan didasarkan pada **bobot kontribusi variabel klinis (Feature Importance)** 
     yang dihitung secara matematis oleh algoritma Machine Learning.
@@ -383,7 +383,7 @@ with tab4:
         'Gradient Boosting (%)': gb_importance * 100
     }).sort_values(by='Random Forest (%)', ascending=True)
     
-    st.subheader("📊 Visualisasi Kontribusi Variabel Klinis (Feature Importance)")
+    st.subheader("Visualisasi Kontribusi Variabel Klinis (Feature Importance)")
     selected_fi_model = st.radio(
         "Tampilkan Bobot Variabel Berdasarkan Model:",
         ['Random Forest (%)', 'Gradient Boosting (%)'],
@@ -404,7 +404,7 @@ with tab4:
     st.plotly_chart(fig_fi, use_container_width=True)
     
     st.markdown("---")
-    st.subheader("📚 Matriks Rekomendasi Modul Pelatihan SDM Kesehatan")
+    st.subheader("Matriks Rekomendasi Modul Pelatihan SDM Kesehatan")
     
     col_mod1, col_mod2, col_mod3 = st.columns(3)
     
