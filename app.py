@@ -123,7 +123,7 @@ trained_models, metrics_df, eval_details, feature_cols, scaler = train_models_an
 tab1, tab2, tab3, tab4 = st.tabs([
     "📊 Overview & EDA", 
     "🤖 Performa Model ML", 
-    "🔮 Simulasi Intervensi Klinis (What-If Analysis)", 
+    "🔮 Simulasi Intervensi Klinis (What-If Analysis) & Diagnosis", 
     "🎯 Rekomendasi Pelatihan SDM"
 ])
 
