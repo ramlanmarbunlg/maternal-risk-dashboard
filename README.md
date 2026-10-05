@@ -57,4 +57,4 @@ maternal-risk-dashboard/
 └── README.md                             # Dokumentasi proyek
 
 ## 🔗 Demo Aplikasi
-https://sismoriskes.streamlit.app
+[SISMORISKES] (https://sismoriskes.streamlit.app)
